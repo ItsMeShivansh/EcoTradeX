@@ -2,9 +2,6 @@
  * EcoTradex — Form Validation & Submission
  */
 
-const API_BASE_URL = 'https://ecotradex-qeqc.onrender.com';
-const apiUrl = (path) => new URL(path, API_BASE_URL).toString();
-
 document.addEventListener('DOMContentLoaded', () => {
   initForms();
 });
