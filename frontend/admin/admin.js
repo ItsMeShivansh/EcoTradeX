@@ -1,7 +1,7 @@
 /**
  * EcoTradex Admin Dashboard
  */
-const API_BASE_URL = window.API_BASE_URL || 'https://ecotradex-qeqc.onrender.com';
+const API_BASE_URL = 'https://ecotradex-qeqc.onrender.com';
 const apiUrl = (path) => new URL(path, API_BASE_URL).toString();
 
 let TOKEN = '';
