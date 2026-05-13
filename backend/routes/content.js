@@ -3,7 +3,6 @@
  */
 const express = require('express');
 const SiteContent = require('../models/SiteContent');
-const Product = require('../models/Product');
 const router = express.Router();
 
 // GET all content
@@ -12,15 +11,6 @@ router.get('/', async (req, res) => {
     res.json(await SiteContent.get());
   } catch (e) {
     res.status(500).json({ error: 'Failed to load content' });
-  }
-});
-
-// GET all products from Firestore (public endpoint)
-router.get('/products', async (req, res) => {
-  try {
-    res.json(await Product.getAll());
-  } catch (e) {
-    res.status(500).json({ error: 'Failed to load products' });
   }
 });
 

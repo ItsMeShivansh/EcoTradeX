@@ -40,6 +40,16 @@ app.use('/api/contact', contactRoutes);
 app.use('/api/sample-request', sampleRoutes);
 app.use('/api/quote', quoteRoutes);
 
+// Public Products endpoint (from Firestore)
+const Product = require('./models/Product');
+app.get('/api/products', async (req, res) => {
+  try {
+    res.json(await Product.getAll());
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to load products' });
+  }
+});
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
