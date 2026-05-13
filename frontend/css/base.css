@@ -1,0 +1,183 @@
+/* ============================================
+   Base Typography & Body Styles
+   ============================================ */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  color: var(--color-text-body);
+  background-color: var(--color-bg-primary);
+  line-height: var(--lh-normal);
+}
+
+/* ── Headings ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-heading);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+}
+
+h1 {
+  font-size: var(--fs-5xl);
+  font-weight: var(--fw-bold);
+}
+
+h2 {
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
+}
+
+h3 {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+}
+
+h4 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+}
+
+h5 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+}
+
+h6 {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+}
+
+/* ── Body Text ── */
+p {
+  margin-bottom: var(--space-4);
+  color: var(--color-text-body);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+strong, b {
+  font-weight: var(--fw-semibold);
+}
+
+small {
+  font-size: var(--fs-sm);
+}
+
+/* ── Links ── */
+a {
+  transition: color var(--transition-fast);
+}
+
+.link {
+  color: var(--color-primary);
+  font-weight: var(--fw-medium);
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--color-primary);
+  transition: width var(--transition-base);
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+/* ── Code / Mono ── */
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  background: var(--color-bg-tertiary);
+  padding: 0.15em 0.4em;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Section Titles ── */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.section-title {
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-4);
+}
+
+.section-subtitle {
+  font-size: var(--fs-lg);
+  color: var(--color-text-secondary);
+  max-width: 640px;
+  line-height: var(--lh-relaxed);
+}
+
+/* ── Dividers ── */
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-8) 0;
+}
+
+/* ── Selection ── */
+mark {
+  background: var(--color-forest-100);
+  color: var(--color-forest-800);
+  padding: 0.1em 0.3em;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Utility: Text ── */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-muted { color: var(--color-text-muted); }
+.text-heading { color: var(--color-text-heading); }
+.text-white { color: var(--color-text-inverse); }
+
+/* ── Utility: Display ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* ── Animations: Fade In on Scroll ── */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll.delay-1 { transition-delay: 0.1s; }
+.animate-on-scroll.delay-2 { transition-delay: 0.2s; }
+.animate-on-scroll.delay-3 { transition-delay: 0.3s; }
+.animate-on-scroll.delay-4 { transition-delay: 0.4s; }

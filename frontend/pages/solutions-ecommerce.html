@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solutions for E-commerce & Retail — Eco TradeX</title>
+  <meta name="description" content="Compostable courier mailers, carry bags, and liners for e-commerce and retail.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css"><link rel="stylesheet" href="../css/reset.css"><link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/layout.css"><link rel="stylesheet" href="../css/components.css"><link rel="stylesheet" href="../css/navigation.css"><link rel="stylesheet" href="../css/footer.css"><link rel="stylesheet" href="../css/hero.css"><link rel="stylesheet" href="../css/products.css"><link rel="stylesheet" href="../css/sections.css"><link rel="stylesheet" href="../css/whatsapp.css"><link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<div id="shared-navbar"></div>
+<section class="page-hero"><span class="page-hero__label">Solutions by Industry</span><h1 class="page-hero__title">For E-commerce & Retail</h1><p class="page-hero__subtitle">Compostable courier mailers, carry bags, and garbage liners — custom-branded for your retail operations.</p></section>
+
+<section class="section"><div class="container"><div class="grid-2 gap-16" style="align-items:center;">
+  <div class="animate-on-scroll"><span class="section-label">The Challenge</span><h2 class="section-title" style="font-size:var(--fs-3xl);">Packaging at Scale</h2><div class="flex-col gap-4 mt-6" id="ecom-challenges"></div></div>
+  <div class="animate-on-scroll delay-1"><span class="section-label">Our Solution</span><h2 class="section-title" style="font-size:var(--fs-3xl);">EcoTradex Delivers</h2><div class="flex-col gap-4 mt-6" id="ecom-solutions"></div></div>
+</div></div></section>
+
+<section class="section section--alt"><div class="container">
+  <div class="text-center" style="margin-bottom:var(--space-12)"><span class="section-label">Recommended Products</span><h2 class="section-title">For Your Industry</h2></div>
+  <div class="grid-auto-fit" id="ecommerce-products"></div>
+  <div class="text-center" style="margin-top:var(--space-8)"><a href="products-bags.html" class="btn btn-outline-green">View Full Catalog</a></div>
+</div></section>
+
+<section class="section"><div class="container-narrow text-center"><h2 class="section-title">Ready to Sample?</h2><p class="section-subtitle mx-auto" style="margin-bottom:var(--space-8)">Ships within 48 hours.</p><a href="contact.html" class="btn btn-primary btn-lg">Request Sample Kit</a></div></section>
+
+<div id="shared-footer"></div><div id="shared-whatsapp"></div>
+<script src="../js/main.js"></script><script src="../js/components.js"></script><script src="../js/products.js"></script><script src="../js/whatsapp.js"></script><script src="../js/animations.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  await injectSharedComponents('solutions');
+  const content = await loadSiteContent();
+  if (!content) return;
+  const sol = content.solutions?.find(s => s.id === 'ecommerce');
+  if (sol) {
+    document.getElementById('ecom-challenges').innerHTML = sol.challenges.map(c => `<div class="card-flat" style="padding:var(--space-4);"><h4 style="font-size:var(--fs-base);font-weight:600;margin-bottom:var(--space-1);">${c.icon} ${c.title}</h4><p style="font-size:var(--fs-sm);color:var(--color-text-secondary);">${c.text}</p></div>`).join('');
+    document.getElementById('ecom-solutions').innerHTML = sol.solutionPoints.map(s => `<div class="card-flat" style="padding:var(--space-4);border-left:3px solid var(--color-blue-500);"><h4 style="font-size:var(--fs-base);font-weight:600;margin-bottom:var(--space-1);">${s.title}</h4><p style="font-size:var(--fs-sm);color:var(--color-text-secondary);">${s.text}</p></div>`).join('');
+    const data = await loadProducts();
+    if (data) {
+      const rec = data.bags.filter(p => sol.recommendedProducts.includes(p.id));
+      document.getElementById('ecommerce-products').innerHTML = rec.map(p => createProductCard(p)).join('');
+    }
+  }
+  if (typeof initScrollAnimations === 'function') initScrollAnimations();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco-Vault — Digital Compliance Vault — Eco TradeX</title>
+  <meta name="description" content="Verified certificates, traceability data, and QR-code verification for EcoTradex compostable products.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css"><link rel="stylesheet" href="../css/reset.css"><link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/layout.css"><link rel="stylesheet" href="../css/components.css"><link rel="stylesheet" href="../css/navigation.css"><link rel="stylesheet" href="../css/footer.css"><link rel="stylesheet" href="../css/hero.css"><link rel="stylesheet" href="../css/eco-vault.css"><link rel="stylesheet" href="../css/sections.css"><link rel="stylesheet" href="../css/whatsapp.css"><link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<div id="shared-navbar"></div>
+<section class="page-hero">
+  <span class="page-hero__label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> The Compliance Vault</span>
+  <h1 class="page-hero__title">Eco-Vault</h1>
+  <p class="page-hero__subtitle">Transparency is our competitive edge. Verified certificates, batch-level traceability, and QR-verified compostability.</p>
+</section>
+
+<!-- Certificates -->
+<section class="section" id="certificates"><div class="container">
+  <div class="text-center" style="margin-bottom:var(--space-12)"><span class="section-label">Verified Certificates</span><h2 class="section-title">Active Certifications</h2></div>
+  <div id="cert-grid" class="cert-explain-grid"></div>
+  <div class="text-center" style="margin-top:var(--space-8)"><a href="contact.html" class="btn btn-primary">Request Full Documentation Pack</a></div>
+</div></section>
+
+<!-- Traceability -->
+<section class="section section--alt" id="traceability"><div class="container">
+  <div class="text-center" style="margin-bottom:var(--space-12)"><span class="section-label">The Grade-A Protocol</span><h2 class="section-title">Batch-Level Traceability</h2><p class="section-subtitle mx-auto">Every shipment undergoes our 6-step quality audit.</p></div>
+  <div id="trace-timeline" class="trace-timeline"></div>
+</div></section>
+
+<!-- QR System -->
+<section class="section" id="qr-system"><div class="container">
+  <div class="grid-2 gap-16" style="align-items:center;">
+    <div class="animate-on-scroll" style="text-align:center;">
+      <div style="width:200px;height:200px;margin:0 auto;background:var(--color-bg-tertiary);border-radius:var(--radius-xl);display:flex;align-items:center;justify-content:center;">
+        <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="var(--color-slate-400)" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="3" height="3"/><rect x="18" y="18" width="3" height="3"/></svg>
+      </div>
+      <p style="font-family:var(--font-mono);font-size:var(--fs-xs);color:var(--color-text-muted);margin-top:var(--space-4);">QR label on every EcoTradex product</p>
+    </div>
+    <div class="animate-on-scroll delay-1">
+      <span class="section-label">QR Verification System</span>
+      <h2 class="section-title" style="font-size:var(--fs-3xl);">How Your Buyers Verify</h2>
+      <p style="color:var(--color-text-secondary);margin-bottom:var(--space-6);">Every product carries a QR label linking to a verification page showing certification status, material data, and composting instructions.</p>
+      <div class="process-grid" style="grid-template-columns:1fr;">
+        <div class="process-step" style="text-align:left;display:flex;gap:var(--space-4);align-items:center;padding:var(--space-4) var(--space-5);">
+          <div class="process-step__number" style="margin:0;flex-shrink:0;">1</div>
+          <div><strong>Customer Scans QR Code</strong><br><span style="font-size:var(--fs-sm);color:var(--color-text-secondary);">On the product packaging</span></div>
+        </div>
+        <div class="process-step" style="text-align:left;display:flex;gap:var(--space-4);align-items:center;padding:var(--space-4) var(--space-5);">
+          <div class="process-step__number" style="margin:0;flex-shrink:0;">2</div>
+          <div><strong>Verification Page Loads</strong><br><span style="font-size:var(--fs-sm);color:var(--color-text-secondary);">Product name, batch ID, certifications</span></div>
+        </div>
+        <div class="process-step" style="text-align:left;display:flex;gap:var(--space-4);align-items:center;padding:var(--space-4) var(--space-5);">
+          <div class="process-step__number" style="margin:0;flex-shrink:0;">3</div>
+          <div><strong>Composting Instructions</strong><br><span style="font-size:var(--fs-sm);color:var(--color-text-secondary);">Industrial vs. home composting guidance</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<div id="shared-footer"></div>
+<div id="shared-whatsapp"></div>
+<script src="../js/main.js"></script><script src="../js/components.js"></script><script src="../js/whatsapp.js"></script><script src="../js/animations.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  await injectSharedComponents('eco-vault');
+  const content = await loadSiteContent();
+  if (!content) return;
+
+  // Certificates
+  if (content.certifications) {
+    document.getElementById('cert-grid').innerHTML = content.certifications.map(cert => `
+      <div class="cert-explain-card animate-on-scroll">
+        <div class="cert-explain-card__header">
+          <div class="cert-explain-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><h3 class="cert-explain-card__name">${cert.name}</h3><span class="cert-explain-card__issuer">${cert.issuer}</span></div>
+          <span class="cert-explain-card__status">${cert.status}</span>
+        </div>
+        <p class="cert-explain-card__desc">${cert.description}</p>
+        <span class="cert-explain-card__validity">${cert.validity}</span>
+      </div>
+    `).join('');
+  }
+
+  // Traceability
+  if (content.traceabilitySteps) {
+    document.getElementById('trace-timeline').innerHTML = content.traceabilitySteps.map(s => `
+      <div class="trace-step animate-on-scroll">
+        <div class="trace-step__number">${s.number}</div>
+        <div class="trace-step__content"><h4 class="trace-step__title">${s.title}</h4><p class="trace-step__desc">${s.description}</p></div>
+      </div>
+    `).join('');
+  }
+
+  if (typeof initScrollAnimations === 'function') initScrollAnimations();
+});
+</script>
+</body>
+</html>

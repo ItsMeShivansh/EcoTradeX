@@ -1,0 +1,674 @@
+{
+  "tableware": [
+    {
+      "id": "bagasse-round-plate-6",
+      "name": "Round Plate — 6",
+      "category": "Compostable Tableware",
+      "subcategory": "Plates",
+      "badge": "Best Seller",
+      "description": "Compact 6-inch bagasse round plate, ideal for appetizers, sides, and desserts. Made from 100% sugarcane fiber with natural moisture barrier.",
+      "image": "assets/round_plate_6.jpg",
+      "specs": {
+        "material": "100% Sugarcane Bagasse",
+        "dimensions": "6\" (152mm) diameter",
+        "weight": "8g per unit",
+        "weightBearing": "Up to 350g",
+        "heatResistance": "120°C / 248°F",
+        "moistureResistance": "High — 2hr liquid hold",
+        "microwaveSafe": "Yes (up to 3 min)",
+        "freezerSafe": "Yes (down to -20°C)",
+        "composting": "60–90 days (industrial)",
+        "pfasFree": "Yes — Verified"
+      },
+      "export": {
+        "hsCode": "4823.70",
+        "unitsPerCarton": 500,
+        "cartonDimensions": "52 × 52 × 28 cm",
+        "cartonWeight": "4.5 kg",
+        "cartonsPerPallet": 40,
+        "palletSize": "1200 × 1000 mm (Euro)",
+        "unitsPerContainer20ft": 200000
+      },
+      "pricing": {
+        "starter": {
+          "volume": "500 units",
+          "pricePerUnit": "₹4.20",
+          "moq": "500"
+        },
+        "bulk": {
+          "volume": "5,000 units",
+          "pricePerUnit": "₹3.40",
+          "moq": "5000"
+        },
+        "container": {
+          "volume": "Full Container (200K)",
+          "pricePerUnit": "₹2.60",
+          "moq": "200000"
+        }
+      },
+      "certifications": [
+        "CPCB",
+        "EN 13432",
+        "PFAS-Free",
+        "IS/ISO 17088"
+      ]
+    },
+    {
+      "id": "bagasse-round-plate-9",
+      "name": "Round Plate — 9",
+      "category": "Compostable Tableware",
+      "subcategory": "Plates",
+      "badge": "Popular",
+      "description": "Standard 9-inch dinner plate for full meals. Heavy-duty construction supports main courses without flex or soak-through.",
+      "image": "assets/round_plate_9.jpg",
+      "specs": {
+        "material": "100% Sugarcane Bagasse",
+        "dimensions": "9\" (229mm) diameter",
+        "weight": "18g per unit",
+        "weightBearing": "Up to 600g",
+        "heatResistance": "120°C / 248°F",
+        "moistureResistance": "High — 3hr liquid hold",
+        "microwaveSafe": "Yes (up to 3 min)",
+        "freezerSafe": "Yes (down to -20°C)",
+        "composting": "60–90 days (industrial)",
+        "pfasFree": "Yes — Verified"
+      },
+      "export": {
+        "hsCode": "4823.70",
+        "unitsPerCarton": 250,
+        "cartonDimensions": "58 × 58 × 30 cm",
+        "cartonWeight": "5.0 kg",
+        "cartonsPerPallet": 36,
+        "palletSize": "1200 × 1000 mm (Euro)",
+        "unitsPerContainer20ft": 108000
+      },
+      "pricing": {
+        "starter": {
+          "volume": "500 units",
+          "pricePerUnit": "₹5.80",
+          "moq": "500"
+        },
+        "bulk": {
+          "volume": "5,000 units",
+          "pricePerUnit": "₹4.50",
+          "moq": "5000"
+        },
+        "container": {
+          "volume": "Full Container (108K)",
+          "pricePerUnit": "₹3.50",
+          "moq": "108000"
+        }
+      },
+      "certifications": [
+        "CPCB",
+        "EN 13432",
+        "PFAS-Free",
+        "IS/ISO 17088"
+      ]
+    },
+    {
+      "id": "bagasse-round-plate-10",
+      "name": "Round Plate — 10",
+      "category": "Compostable Tableware",
+      "subcategory": "Plates",
+      "description": "Large 10-inch plate for generous portions and catering. Reinforced rim prevents edge deformation under load.",
+      "image": "assets/round_plate_10.jpg",
+      "specs": {
+        "material": "100% Sugarcane Bagasse",
+        "dimensions": "10\" (254mm) diameter",
+        "weight": "22g per unit",
+        "weightBearing": "Up to 700g",
+        "heatResistance": "120°C / 248°F",
+        "moistureResistance": "High — 3hr liquid hold",
+        "microwaveSafe": "Yes (up to 3 min)",
+        "freezerSafe": "Yes (down to -20°C)",
+        "composting": "60–90 days (industrial)",
+        "pfasFree": "Yes — Verified"
+      },
+      "export": {
+        "hsCode": "4823.70",
+        "unitsPerCarton": 200,
+        "cartonDimensions": "60 × 60 × 32 cm",
+        "cartonWeight": "5.2 kg",
+        "cartonsPerPallet": 32,
+        "palletSize": "1200 × 1000 mm (Euro)",
+        "unitsPerContainer20ft": 80000
+      },
+      "pricing": {
+        "starter": {
+          "volume": "500 units",
+          "pricePerUnit": "₹6.90",
+          "moq": "500"
+        },
+        "bulk": {
+          "volume": "5,000 units",
+          "pricePerUnit": "₹5.40",
+          "moq": "5000"
+        },
+        "container": {
+          "volume": "Full Container (80K)",
+          "pricePerUnit": "₹4.20",
+          "moq": "80000"
+        }
+      },
+      "certifications": [
+        "CPCB",
+        "EN 13432",
+        "PFAS-Free",
+        "IS/ISO 17088"
+      ]
+    },
+    {
+      "id": "bagasse-bowl-12oz",
+      "name": "Bowl — 12oz",
+      "category": "Compostable Tableware",
+      "subcategory": "Bowls",
+      "badge": "New",
+      "description": "12oz bowl for soups, salads, and sides. Deep-wall design prevents spill-over. Natural moisture barrier holds liquids for hours.",
+      "image": "assets/bowl_12oz.jpg",
+      "specs": {
+        "material": "100% Sugarcane Bagasse",
+        "dimensions": "5.5\" × 2.5\" deep (140mm × 63mm)",
+        "capacity": "12 oz (350ml)",
+        "weight": "12g per unit",
+        "weightBearing": "Up to 500g",
+        "heatResistance": "120°C / 248°F",
+        "moistureResistance": "Very High — 4hr liquid hold",
+        "microwaveSafe": "Yes (up to 3 min)",
+        "freezerSafe": "Yes (down to -20°C)",
+        "composting": "60–90 days (industrial)",
+        "pfasFree": "Yes — Verified"
+      },
+      "export": {
+        "hsCode": "4823.70",
+        "unitsPerCarton": 400,
+        "cartonDimensions": "50 × 50 × 35 cm",
+        "cartonWeight": "5.5 kg",
+        "cartonsPerPallet": 36,
+        "palletSize": "1200 × 1000 mm (Euro)",
+        "unitsPerContainer20ft": 172800
+      },
+      "pricing": {
+        "starter": {
+          "volume": "500 units",
+          "pricePerUnit": "₹4.80",
+          "moq": "500"
+        },
+        "bulk": {
+          "volume": "5,000 units",
+          "pricePerUnit": "₹3.80",
+          "moq": "5000"
+        },
+        "container": {
+          "volume": "Full Container (172K)",
+          "pricePerUnit": "₹2.90",
+          "moq": "172800"
+        }
+      },
+      "certifications": [
+        "CPCB",
+        "EN 13432",
+        "PFAS-Free"
+      ]
+    },
+    {
+      "id": "bagasse-bowl-32oz",
+      "name": "Bowl — 32oz",
+      "category": "Compostable Tableware",
+      "subcategory": "Bowls",
+      "description": "Large 32oz bowl for main courses, noodles, and bulk servings. Extra-thick walls for heavy-duty applications.",
+      "image": "assets/bowl_32oz.jpg",
+      "specs": {
+        "material": "100% Sugarcane Bagasse",
+        "dimensions": "7.5\" × 3\" deep (190mm × 76mm)",
+        "capacity": "32 oz (950ml)",
+        "weight": "24g per unit",
+        "weightBearing": "Up to 900g",
+        "heatResistance": "120°C / 248°F",
+        "moistureResistance": "Very High — 4hr liquid hold",
+        "microwaveSafe": "Yes (up to 3 min)",
+        "freezerSafe": "Yes (down to -20°C)",
+        "composting": "60–90 days (industrial)",
+        "pfasFree": "Yes — Verified"
+      },
+      "export": {
+        "hsCode": "4823.70",
+        "unitsPerCarton": 200,
+        "cartonDimensions": "56 × 56 × 38 cm",
+        "cartonWeight": "5.8 kg",
+        "cartonsPerPallet": 30,
+        "palletSize": "1200 × 1000 mm (Euro)",
+        "unitsPerContainer20ft": 72000
+      },
+      "pricing": {
+        "starter": {
+          "volume": "500 units",
+          "pricePerUnit": "₹8.50",
+          "moq": "500"
+        },
+        "bulk": {
+          "volume": "5,000 units",
+          "pricePerUnit": "₹6.80",
+          "moq": "5000"
+        },
+        "container": {
+          "volume": "Full Container (72K)",
+          "pricePerUnit": "₹5.20",
+          "moq": "72000"
+        }
+      },
+      "certifications": [
+        "CPCB",
+        "EN 13432",
+        "PFAS-Free"
+      ]
+    },
+    {
+      "id": "bagasse-clamshell-8",
+      "name": "Clamshell Box — 8",
+      "category": "Compostable Tableware",
+      "subcategory": "Clamshells",
+      "badge": "Popular",
+      "description": "8-inch hinged clamshell for takeaway meals. Secure snap-lock closure. Grease and moisture resistant for burger-and-fries combos.",
+      "image": "assets/clamshell_box_8.avif",
+      "specs": {
+        "material": "100% Sugarcane Bagasse",
+        "dimensions": "8\" × 8\" × 3\" (203 × 203 × 76mm)",
+        "weight": "32g per unit",
+        "weightBearing": "Up to 800g",
+        "heatResistance": "120°C / 248°F",
+        "moistureResistance": "High — 3hr liquid hold",
+        "microwaveSafe": "Yes (lid open)",
+        "freezerSafe": "Yes (down to -20°C)",
+        "composting": "60–90 days (industrial)",
+        "pfasFree": "Yes — Verified"
+      },
+      "export": {
+        "hsCode": "4823.70",
+        "unitsPerCarton": 200,
+        "cartonDimensions": "55 × 55 × 40 cm",
+        "cartonWeight": "7.0 kg",
+        "cartonsPerPallet": 28,
+        "palletSize": "1200 × 1000 mm (Euro)",
+        "unitsPerContainer20ft": 67200
+      },
+      "pricing": {
+        "starter": {
+          "volume": "500 units",
+          "pricePerUnit": "₹9.50",
+          "moq": "500"
+        },
+        "bulk": {
+          "volume": "5,000 units",
+          "pricePerUnit": "₹7.60",
+          "moq": "5000"
+        },
+        "container": {
+          "volume": "Full Container (67K)",
+          "pricePerUnit": "₹5.80",
+          "moq": "67200"
+        }
+      },
+      "certifications": [
+        "CPCB",
+        "EN 13432",
+        "PFAS-Free"
+      ]
+    },
+    {
+      "id": "cpla-cutlery-set",
+      "name": "CPLA Cutlery Set (Fork + Knife + Spoon)",
+      "category": "Compostable Tableware",
+      "subcategory": "Cutlery",
+      "description": "Individual wrapped 3-piece cutlery set. Made from Crystallized PLA (CPLA) — heat resistant and sturdy. EN 13432 certified compostable.",
+      "image": "assets/CPLA_cutlery_set.webp",
+      "specs": {
+        "material": "CPLA (Crystallized Polylactic Acid)",
+        "dimensions": "6.5\" / 165mm each piece",
+        "weight": "12g per set (4g each)",
+        "weightBearing": "N/A (utensil)",
+        "heatResistance": "85°C / 185°F",
+        "moistureResistance": "High",
+        "microwaveSafe": "No",
+        "freezerSafe": "Yes",
+        "composting": "90–180 days (industrial)",
+        "pfasFree": "Yes — Verified"
+      },
+      "export": {
+        "hsCode": "3924.10",
+        "unitsPerCarton": 500,
+        "cartonDimensions": "45 × 30 × 25 cm",
+        "cartonWeight": "6.5 kg",
+        "cartonsPerPallet": 48,
+        "palletSize": "1200 × 1000 mm (Euro)",
+        "unitsPerContainer20ft": 288000
+      },
+      "pricing": {
+        "starter": {
+          "volume": "500 sets",
+          "pricePerUnit": "₹6.50",
+          "moq": "500"
+        },
+        "bulk": {
+          "volume": "5,000 sets",
+          "pricePerUnit": "₹5.00",
+          "moq": "5000"
+        },
+        "container": {
+          "volume": "Full Container (288K)",
+          "pricePerUnit": "₹3.80",
+          "moq": "288000"
+        }
+      },
+      "certifications": [
+        "CPCB",
+        "EN 13432",
+        "PFAS-Free"
+      ]
+    }
+  ],
+  "bags": [
+    {
+      "id": "compostable-carry-bag-small",
+      "name": "Carry Bag — Small (8",
+      "category": "Compostable Bags",
+      "subcategory": "Carry Bags",
+      "description": "Small compostable carry bag for retail checkout. Made from corn starch blend. Meets CPCB and EN 13432 standards.",
+      "image": "assets/compostable_bag_8_12.png",
+      "specs": {
+        "material": "Corn Starch + PBAT Blend",
+        "dimensions": "8\" × 12\" (200 × 300mm)",
+        "thickness": "25 microns",
+        "weight": "5g per unit",
+        "weightBearing": "Up to 2 kg",
+        "moistureResistance": "Moderate",
+        "composting": "90–180 days (industrial)",
+        "pfasFree": "Yes — Verified",
+        "printable": "Yes — up to 2 colors"
+      },
+      "export": {
+        "hsCode": "3923.21",
+        "unitsPerCarton": 2000,
+        "cartonDimensions": "45 × 35 × 30 cm",
+        "cartonWeight": "10.5 kg",
+        "cartonsPerPallet": 40,
+        "palletSize": "1200 × 1000 mm (Euro)",
+        "unitsPerContainer20ft": 960000
+      },
+      "pricing": {
+        "starter": {
+          "volume": "1,000 units",
+          "pricePerUnit": "₹2.80",
+          "moq": "1000"
+        },
+        "bulk": {
+          "volume": "10,000 units",
+          "pricePerUnit": "₹2.10",
+          "moq": "10000"
+        },
+        "container": {
+          "volume": "Full Container (960K)",
+          "pricePerUnit": "₹1.50",
+          "moq": "960000"
+        }
+      },
+      "certifications": [
+        "CPCB",
+        "EN 13432",
+        "PFAS-Free"
+      ]
+    },
+    {
+      "id": "compostable-carry-bag-large",
+      "name": "Carry Bag — Large (12\" × 18\")",
+      "category": "Compostable Bags",
+      "subcategory": "Carry Bags",
+      "badge": "Best Seller",
+      "description": "Large compostable carry bag for grocery and general retail. Reinforced handles. Corn starch blend with excellent tear resistance.",
+      "image": "assets/images/carry-bag-l.jpg",
+      "specs": {
+        "material": "Corn Starch + PBAT Blend",
+        "dimensions": "12\" × 18\" (300 × 450mm)",
+        "thickness": "30 microns",
+        "weight": "12g per unit",
+        "weightBearing": "Up to 5 kg",
+        "moistureResistance": "Moderate",
+        "composting": "90–180 days (industrial)",
+        "pfasFree": "Yes — Verified",
+        "printable": "Yes — up to 4 colors"
+      },
+      "export": {
+        "hsCode": "3923.21",
+        "unitsPerCarton": 1000,
+        "cartonDimensions": "50 × 40 × 35 cm",
+        "cartonWeight": "12.5 kg",
+        "cartonsPerPallet": 36,
+        "palletSize": "1200 × 1000 mm (Euro)",
+        "unitsPerContainer20ft": 432000
+      },
+      "pricing": {
+        "starter": {
+          "volume": "1,000 units",
+          "pricePerUnit": "₹5.20",
+          "moq": "1000"
+        },
+        "bulk": {
+          "volume": "10,000 units",
+          "pricePerUnit": "₹3.80",
+          "moq": "10000"
+        },
+        "container": {
+          "volume": "Full Container (432K)",
+          "pricePerUnit": "₹2.80",
+          "moq": "432000"
+        }
+      },
+      "certifications": [
+        "CPCB",
+        "EN 13432",
+        "PFAS-Free"
+      ]
+    },
+    {
+      "id": "compostable-garbage-liner-19x21",
+      "name": "Garbage Liner — 19\" × 21\"",
+      "category": "Compostable Bags",
+      "subcategory": "Garbage Liners",
+      "description": "Standard bin liner for wet and dry waste. Compostable at end-of-life. Designed for 7–10L bins in offices and hospitality.",
+      "image": "assets/images/liner-19x21.jpg",
+      "specs": {
+        "material": "Corn Starch + PBAT Blend",
+        "dimensions": "19\" × 21\" (480 × 530mm)",
+        "thickness": "20 microns",
+        "weight": "8g per unit",
+        "weightBearing": "Up to 3 kg",
+        "moistureResistance": "High",
+        "composting": "90–180 days (industrial)",
+        "pfasFree": "Yes — Verified",
+        "printable": "Yes — 1 color"
+      },
+      "export": {
+        "hsCode": "3923.21",
+        "unitsPerCarton": 1500,
+        "cartonDimensions": "45 × 35 × 30 cm",
+        "cartonWeight": "12.5 kg",
+        "cartonsPerPallet": 40,
+        "palletSize": "1200 × 1000 mm (Euro)",
+        "unitsPerContainer20ft": 720000
+      },
+      "pricing": {
+        "starter": {
+          "volume": "1,000 units",
+          "pricePerUnit": "₹3.00",
+          "moq": "1000"
+        },
+        "bulk": {
+          "volume": "10,000 units",
+          "pricePerUnit": "₹2.20",
+          "moq": "10000"
+        },
+        "container": {
+          "volume": "Full Container (720K)",
+          "pricePerUnit": "₹1.60",
+          "moq": "720000"
+        }
+      },
+      "certifications": [
+        "CPCB",
+        "EN 13432"
+      ]
+    },
+    {
+      "id": "compostable-garbage-liner-24x28",
+      "name": "Garbage Liner — 24\" × 28\"",
+      "category": "Compostable Bags",
+      "subcategory": "Garbage Liners",
+      "description": "Large bin liner for 15–20L bins. Suitable for kitchens, restaurants, and commercial waste management. Reinforced seams.",
+      "image": "assets/images/liner-24x28.jpg",
+      "specs": {
+        "material": "Corn Starch + PBAT Blend",
+        "dimensions": "24\" × 28\" (610 × 710mm)",
+        "thickness": "25 microns",
+        "weight": "14g per unit",
+        "weightBearing": "Up to 5 kg",
+        "moistureResistance": "High",
+        "composting": "90–180 days (industrial)",
+        "pfasFree": "Yes — Verified",
+        "printable": "Yes — 1 color"
+      },
+      "export": {
+        "hsCode": "3923.21",
+        "unitsPerCarton": 1000,
+        "cartonDimensions": "50 × 40 × 35 cm",
+        "cartonWeight": "14.5 kg",
+        "cartonsPerPallet": 36,
+        "palletSize": "1200 × 1000 mm (Euro)",
+        "unitsPerContainer20ft": 432000
+      },
+      "pricing": {
+        "starter": {
+          "volume": "1,000 units",
+          "pricePerUnit": "₹4.50",
+          "moq": "1000"
+        },
+        "bulk": {
+          "volume": "10,000 units",
+          "pricePerUnit": "₹3.40",
+          "moq": "10000"
+        },
+        "container": {
+          "volume": "Full Container (432K)",
+          "pricePerUnit": "₹2.50",
+          "moq": "432000"
+        }
+      },
+      "certifications": [
+        "CPCB",
+        "EN 13432"
+      ]
+    },
+    {
+      "id": "compostable-courier-mailer-10x12",
+      "name": "Courier Mailer — 10\" × 12\"",
+      "category": "Compostable Bags",
+      "subcategory": "Courier Mailers",
+      "badge": "New",
+      "description": "Compostable courier mailer with tamper-evident seal. Ideal for e-commerce shipments of clothing and small goods. Custom printing available.",
+      "image": "assets/images/mailer-10x12.jpg",
+      "specs": {
+        "material": "Corn Starch + PBAT Blend",
+        "dimensions": "10\" × 12\" (254 × 305mm)",
+        "thickness": "60 microns",
+        "weight": "18g per unit",
+        "weightBearing": "Up to 2 kg",
+        "moistureResistance": "High",
+        "composting": "90–180 days (industrial)",
+        "pfasFree": "Yes — Verified",
+        "printable": "Yes — up to 4 colors",
+        "tamperEvident": "Yes — peel & seal"
+      },
+      "export": {
+        "hsCode": "3923.21",
+        "unitsPerCarton": 500,
+        "cartonDimensions": "45 × 35 × 25 cm",
+        "cartonWeight": "9.5 kg",
+        "cartonsPerPallet": 48,
+        "palletSize": "1200 × 1000 mm (Euro)",
+        "unitsPerContainer20ft": 288000
+      },
+      "pricing": {
+        "starter": {
+          "volume": "1,000 units",
+          "pricePerUnit": "₹7.50",
+          "moq": "1000"
+        },
+        "bulk": {
+          "volume": "10,000 units",
+          "pricePerUnit": "₹5.80",
+          "moq": "10000"
+        },
+        "container": {
+          "volume": "Full Container (288K)",
+          "pricePerUnit": "₹4.20",
+          "moq": "288000"
+        }
+      },
+      "certifications": [
+        "CPCB",
+        "EN 13432",
+        "PFAS-Free"
+      ]
+    },
+    {
+      "id": "compostable-courier-mailer-12x16",
+      "name": "Courier Mailer — 12\" × 16\"",
+      "category": "Compostable Bags",
+      "subcategory": "Courier Mailers",
+      "description": "Large courier mailer for bigger shipments. Same tamper-evident technology. Suitable for fashion, electronics accessories, and multi-item orders.",
+      "image": "assets/images/mailer-12x16.jpg",
+      "specs": {
+        "material": "Corn Starch + PBAT Blend",
+        "dimensions": "12\" × 16\" (305 × 406mm)",
+        "thickness": "60 microns",
+        "weight": "24g per unit",
+        "weightBearing": "Up to 3 kg",
+        "moistureResistance": "High",
+        "composting": "90–180 days (industrial)",
+        "pfasFree": "Yes — Verified",
+        "printable": "Yes — up to 4 colors",
+        "tamperEvident": "Yes — peel & seal"
+      },
+      "export": {
+        "hsCode": "3923.21",
+        "unitsPerCarton": 400,
+        "cartonDimensions": "50 × 40 × 30 cm",
+        "cartonWeight": "10.0 kg",
+        "cartonsPerPallet": 40,
+        "palletSize": "1200 × 1000 mm (Euro)",
+        "unitsPerContainer20ft": 192000
+      },
+      "pricing": {
+        "starter": {
+          "volume": "1,000 units",
+          "pricePerUnit": "₹9.80",
+          "moq": "1000"
+        },
+        "bulk": {
+          "volume": "10,000 units",
+          "pricePerUnit": "₹7.50",
+          "moq": "10000"
+        },
+        "container": {
+          "volume": "Full Container (192K)",
+          "pricePerUnit": "₹5.60",
+          "moq": "192000"
+        }
+      },
+      "certifications": [
+        "CPCB",
+        "EN 13432",
+        "PFAS-Free"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,447 @@
+/* ============================================
+   EcoTradex Design Tokens
+   "High-Tech Sustainability" Visual Identity
+   Light + Dark Theme System
+   ============================================ */
+
+:root {
+  /* ── Color Palette (raw values — ONLY referenced in theme definitions) ── */
+  --_white: #FAFBFC;
+  --_white-pure: #FFFFFF;
+  --_slate-50: #F8FAFC;
+  --_slate-100: #F1F5F9;
+  --_slate-200: #E2E8F0;
+  --_slate-300: #CBD5E1;
+  --_slate-400: #94A3B8;
+  --_slate-500: #64748B;
+  --_slate-600: #475569;
+  --_slate-700: #334155;
+  --_slate-800: #1E293B;
+  --_slate-900: #0F172A;
+
+  --_forest-50: #F0FDF4;
+  --_forest-100: #DCFCE7;
+  --_forest-200: #BBF7D0;
+  --_forest-300: #86EFAC;
+  --_forest-400: #4ADE80;
+  --_forest-500: #22C55E;
+  --_forest-600: #16A34A;
+  --_forest-700: #15803D;
+  --_forest-800: #166534;
+  --_forest-900: #14532D;
+
+  --_amber-400: #FBBF24;
+  --_amber-500: #F59E0B;
+  --_amber-600: #D97706;
+  --_blue-400: #60A5FA;
+  --_blue-500: #3B82F6;
+  --_blue-600: #2563EB;
+  --_red-500: #EF4444;
+  --_red-600: #DC2626;
+
+  /* ── Dark palette extras ── */
+  --_dark-bg-primary: #0B0F1A;
+  --_dark-bg-secondary: #111827;
+  --_dark-bg-tertiary: #1A2236;
+  --_dark-surface: #1E293B;
+  --_dark-surface-elevated: #243044;
+  --_dark-border: #2A3548;
+  --_dark-border-light: #1F2B3D;
+
+  /* ══════════════════════════════════════════
+     LIGHT THEME (default)
+     ══════════════════════════════════════════ */
+
+  /* ── Backgrounds ── */
+  --color-bg-primary: var(--_white);
+  --color-bg-secondary: var(--_slate-50);
+  --color-bg-tertiary: var(--_slate-100);
+
+  /* ── Surfaces ── */
+  --color-white: var(--_white);
+  --color-white-pure: var(--_white-pure);
+  --color-surface: var(--_white-pure);
+  --color-surface-elevated: var(--_white-pure);
+
+  /* ── Glassmorphism ── */
+  --color-glass-bg: rgba(255, 255, 255, 0.65);
+  --color-glass-bg-strong: rgba(255, 255, 255, 0.75);
+  --color-glass-bg-subtle: rgba(255, 255, 255, 0.5);
+  --color-glass-bg-overlay: rgba(255, 255, 255, 0.6);
+  --color-glass-bg-step: rgba(250, 251, 252, 0.9);
+  --color-glass-bg-canvas: rgba(255, 255, 255, 0.9);
+  --color-glass-border: rgba(255, 255, 255, 0.8);
+  --color-glass-border-strong: rgba(255, 255, 255, 0.9);
+  --color-glass-border-hover: rgba(255, 255, 255, 1);
+  --color-glass-header: rgba(255, 255, 255, 0.4);
+  --color-glass-header-border: rgba(255, 255, 255, 0.6);
+
+  /* ── Slate Scale (semantic) ── */
+  --color-slate-50: var(--_slate-50);
+  --color-slate-100: var(--_slate-100);
+  --color-slate-200: var(--_slate-200);
+  --color-slate-300: var(--_slate-300);
+  --color-slate-400: var(--_slate-400);
+  --color-slate-500: var(--_slate-500);
+  --color-slate-600: var(--_slate-600);
+  --color-slate-700: var(--_slate-700);
+  --color-slate-800: var(--_slate-800);
+  --color-slate-900: var(--_slate-900);
+
+  /* ── Forest Green Scale (semantic) ── */
+  --color-forest-50: var(--_forest-50);
+  --color-forest-100: var(--_forest-100);
+  --color-forest-200: var(--_forest-200);
+  --color-forest-300: var(--_forest-300);
+  --color-forest-400: var(--_forest-400);
+  --color-forest-500: var(--_forest-500);
+  --color-forest-600: var(--_forest-600);
+  --color-forest-700: var(--_forest-700);
+  --color-forest-800: var(--_forest-800);
+  --color-forest-900: var(--_forest-900);
+
+  /* ── Accent Colors ── */
+  --color-amber-400: var(--_amber-400);
+  --color-amber-500: var(--_amber-500);
+  --color-amber-600: var(--_amber-600);
+  --color-blue-400: var(--_blue-400);
+  --color-blue-500: var(--_blue-500);
+  --color-blue-600: var(--_blue-600);
+  --color-red-500: var(--_red-500);
+  --color-red-600: var(--_red-600);
+
+  /* ── Semantic Colors ── */
+  --color-primary: var(--_forest-600);
+  --color-primary-hover: var(--_forest-700);
+  --color-primary-light: var(--_forest-50);
+  --color-text-heading: var(--_slate-800);
+  --color-text-body: var(--_slate-600);
+  --color-text-secondary: var(--_slate-500);
+  --color-text-muted: var(--_slate-400);
+  --color-text-inverse: var(--_white-pure);
+  --color-border: var(--_slate-200);
+  --color-border-light: var(--_slate-100);
+  --color-success: var(--_forest-500);
+  --color-warning: var(--_amber-500);
+  --color-info: var(--_blue-500);
+  --color-error: var(--_red-500);
+
+  /* ── Dark Section (inverted block within light theme) ── */
+  --color-dark-section-bg: var(--_slate-900);
+  --color-dark-section-text: var(--_slate-300);
+  --color-dark-section-heading: var(--_white-pure);
+  --color-dark-section-muted: var(--_slate-400);
+  --color-dark-section-label: var(--_forest-400);
+
+  /* ── Header ── */
+  --color-header-bg: rgba(250, 251, 252, 0.85);
+
+  /* ── Card shadows ── */
+  --color-card-shadow: rgba(15, 23, 42, 0.03);
+  --color-card-shadow-hover: rgba(15, 23, 42, 0.08);
+  --color-card-shadow-elevated: rgba(15, 23, 42, 0.06);
+
+  /* ── Modal ── */
+  --color-modal-backdrop: rgba(15, 23, 42, 0.5);
+
+  /* ── Badge colors ── */
+  --color-badge-amber-bg: #FFFBEB;
+  --color-badge-amber-border: #FDE68A;
+  --color-badge-blue-bg: #EFF6FF;
+  --color-badge-blue-border: #BFDBFE;
+
+  /* ── Footer ── */
+  --color-footer-bg: var(--_slate-900);
+  --color-footer-text: var(--_slate-400);
+  --color-footer-heading: var(--_white-pure);
+  --color-footer-accent: var(--_forest-400);
+  --color-footer-border: rgba(255, 255, 255, 0.08);
+  --color-footer-cert-bg: rgba(255, 255, 255, 0.05);
+  --color-footer-cert-border: rgba(255, 255, 255, 0.1);
+  --color-footer-lc-bg: rgba(22, 163, 74, 0.1);
+  --color-footer-lc-border: rgba(22, 163, 74, 0.2);
+  --color-footer-muted: var(--_slate-500);
+
+  /* ── Hero ── */
+  --color-hero-bg: var(--_slate-900);
+  --color-hero-overlay-start: rgba(15, 23, 42, 0.92);
+  --color-hero-overlay-end: rgba(15, 23, 42, 0.7);
+  --color-hero-trust-bg: rgba(255, 255, 255, 0.06);
+  --color-hero-trust-border: rgba(255, 255, 255, 0.1);
+  --color-hero-label-bg: rgba(22, 163, 74, 0.15);
+  --color-hero-label-border: rgba(22, 163, 74, 0.3);
+
+  /* ── Stat card ── */
+  --color-stat-bg: rgba(255, 255, 255, 0.08);
+  --color-stat-border: rgba(255, 255, 255, 0.15);
+  --color-stat-shadow: rgba(0, 0, 0, 0.1);
+  --color-stat-value: var(--_white-pure);
+
+  /* ── Focus ring ── */
+  --color-focus-ring: rgba(22, 163, 74, 0.1);
+
+  /* ── Selection ── */
+  --color-selection-bg: var(--_forest-100);
+  --color-selection-text: var(--_forest-800);
+
+  /* ── Scrollytelling ── */
+  --color-scrolly-gradient-mid: #F5F0EB;
+  --color-scrolly-gradient-deep: #E8E0D4;
+
+  /* ── MOQ table ── */
+  --color-table-header-bg: var(--_slate-900);
+  --color-table-header-text: var(--_white-pure);
+  --color-table-row-hover: var(--_forest-50);
+
+  /* ── Process step hover border ── */
+  --color-step-hover-border: rgba(22, 163, 74, 0.5);
+
+  /* ── Shadows ── */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+  --shadow-2xl: 0 25px 50px -12px rgba(15, 23, 42, 0.2);
+  --shadow-inner: inset 0 2px 4px rgba(15, 23, 42, 0.05);
+  --shadow-glow-green: 0 0 20px rgba(22, 163, 74, 0.15);
+  --shadow-card: 0 8px 32px var(--color-card-shadow);
+  --shadow-card-hover: 0 12px 40px var(--color-card-shadow-hover);
+  --shadow-card-large: 0 16px 48px var(--color-card-shadow-hover);
+
+  /* ── Typography ── */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --fs-xs: 0.75rem;      /* 12px */
+  --fs-sm: 0.8125rem;     /* 13px */
+  --fs-base: 0.9375rem;   /* 15px */
+  --fs-md: 1rem;          /* 16px */
+  --fs-lg: 1.125rem;      /* 18px */
+  --fs-xl: 1.25rem;       /* 20px */
+  --fs-2xl: 1.5rem;       /* 24px */
+  --fs-3xl: 1.875rem;     /* 30px */
+  --fs-4xl: 2.25rem;      /* 36px */
+  --fs-5xl: 3rem;         /* 48px */
+  --fs-6xl: 3.75rem;      /* 60px */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --lh-tight: 1.2;
+  --lh-snug: 1.375;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.75;
+
+  --ls-tight: -0.025em;
+  --ls-normal: 0;
+  --ls-wide: 0.025em;
+  --ls-wider: 0.05em;
+  --ls-widest: 0.1em;
+
+  /* ── Spacing ── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ── Border Radius ── */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+  --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Z-Index Scale ── */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal-backdrop: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-whatsapp: 600;
+
+  /* ── Container ── */
+  --container-max: 1280px;
+  --container-narrow: 900px;
+  --container-padding: var(--space-6);
+}
+
+
+/* ══════════════════════════════════════════
+   DARK THEME
+   Applied via .dark class on <html>
+   ══════════════════════════════════════════ */
+
+html.dark {
+  /* ── Backgrounds (unified single surface) ── */
+  --color-bg-primary: #0B0F19;
+  --color-bg-secondary: #0B0F19;
+  --color-bg-tertiary: #131824;
+
+  /* ── Surfaces (cards & elevated elements — the only depth cue) ── */
+  --color-white: #0B0F19;
+  --color-white-pure: #131824;
+  --color-surface: #141A27;
+  --color-surface-elevated: #1A2233;
+
+  /* ── Glassmorphism (subtle white overlay for card depth) ── */
+  --color-glass-bg: rgba(255, 255, 255, 0.03);
+  --color-glass-bg-strong: rgba(255, 255, 255, 0.05);
+  --color-glass-bg-subtle: rgba(255, 255, 255, 0.02);
+  --color-glass-bg-overlay: rgba(255, 255, 255, 0.04);
+  --color-glass-bg-step: rgba(255, 255, 255, 0.03);
+  --color-glass-bg-canvas: rgba(255, 255, 255, 0.04);
+  --color-glass-border: rgba(255, 255, 255, 0.06);
+  --color-glass-border-strong: rgba(255, 255, 255, 0.09);
+  --color-glass-border-hover: rgba(255, 255, 255, 0.14);
+  --color-glass-header: rgba(255, 255, 255, 0.02);
+  --color-glass-header-border: rgba(255, 255, 255, 0.05);
+
+  /* ── Slate Scale (inverted — unified base) ── */
+  --color-slate-50: #131824;
+  --color-slate-100: #0B0F19;
+  --color-slate-200: #1E2738;
+  --color-slate-300: var(--_slate-500);
+  --color-slate-400: var(--_slate-400);
+  --color-slate-500: var(--_slate-400);
+  --color-slate-600: var(--_slate-300);
+  --color-slate-700: var(--_slate-200);
+  --color-slate-800: var(--_slate-100);
+  --color-slate-900: #0B0F19;
+
+  /* ── Forest Green Scale (adjusted for dark bg) ── */
+  --color-forest-50: rgba(22, 163, 74, 0.1);
+  --color-forest-100: rgba(22, 163, 74, 0.15);
+  --color-forest-200: rgba(22, 163, 74, 0.25);
+  --color-forest-700: var(--_forest-400);
+  --color-forest-800: var(--_forest-300);
+
+  /* ── Semantic Colors ── */
+  --color-primary: var(--_forest-500);
+  --color-primary-hover: var(--_forest-400);
+  --color-primary-light: rgba(22, 163, 74, 0.1);
+  --color-text-heading: #E2E8F0;
+  --color-text-body: #94A3B8;
+  --color-text-secondary: #7E8FA6;
+  --color-text-muted: #5A6A80;
+  --color-text-inverse: #0B0F19;
+  --color-border: #1E2738;
+  --color-border-light: #161C2B;
+
+  /* ── Dark Section (unified with base — no visible shift) ── */
+  --color-dark-section-bg: #0B0F19;
+  --color-dark-section-text: var(--_slate-400);
+  --color-dark-section-heading: #E2E8F0;
+  --color-dark-section-muted: #5A6A80;
+  --color-dark-section-label: var(--_forest-400);
+
+  /* ── Header ── */
+  --color-header-bg: rgba(11, 15, 25, 0.88);
+
+  /* ── Card shadows ── */
+  --color-card-shadow: rgba(0, 0, 0, 0.2);
+  --color-card-shadow-hover: rgba(0, 0, 0, 0.35);
+  --color-card-shadow-elevated: rgba(0, 0, 0, 0.25);
+
+  /* ── Modal ── */
+  --color-modal-backdrop: rgba(0, 0, 0, 0.7);
+
+  /* ── Badge colors ── */
+  --color-badge-amber-bg: rgba(251, 191, 36, 0.1);
+  --color-badge-amber-border: rgba(251, 191, 36, 0.25);
+  --color-badge-blue-bg: rgba(59, 130, 246, 0.1);
+  --color-badge-blue-border: rgba(59, 130, 246, 0.25);
+
+  /* ── Footer (same base, uses subtle top border for separation) ── */
+  --color-footer-bg: #0B0F19;
+  --color-footer-text: #5A6A80;
+  --color-footer-heading: #E2E8F0;
+  --color-footer-accent: var(--_forest-400);
+  --color-footer-border: rgba(255, 255, 255, 0.06);
+  --color-footer-cert-bg: rgba(255, 255, 255, 0.03);
+  --color-footer-cert-border: rgba(255, 255, 255, 0.06);
+  --color-footer-lc-bg: rgba(22, 163, 74, 0.08);
+  --color-footer-lc-border: rgba(22, 163, 74, 0.15);
+  --color-footer-muted: #4A5A70;
+
+  /* ── Hero (the ONLY gradient on the page) ── */
+  --color-hero-bg: #060A14;
+  --color-hero-overlay-start: rgba(6, 10, 20, 0.95);
+  --color-hero-overlay-end: rgba(11, 15, 25, 0.85);
+  --color-hero-trust-bg: rgba(255, 255, 255, 0.04);
+  --color-hero-trust-border: rgba(255, 255, 255, 0.07);
+  --color-hero-label-bg: rgba(22, 163, 74, 0.12);
+  --color-hero-label-border: rgba(22, 163, 74, 0.25);
+
+  /* ── Stat card ── */
+  --color-stat-bg: rgba(255, 255, 255, 0.04);
+  --color-stat-border: rgba(255, 255, 255, 0.08);
+  --color-stat-shadow: rgba(0, 0, 0, 0.3);
+  --color-stat-value: #E2E8F0;
+
+  /* ── Focus ring ── */
+  --color-focus-ring: rgba(22, 163, 74, 0.2);
+
+  /* ── Selection ── */
+  --color-selection-bg: rgba(22, 163, 74, 0.25);
+  --color-selection-text: var(--_forest-300);
+
+  /* ── Scrollytelling (flattened — no gradient in dark mode) ── */
+  --color-scrolly-gradient-mid: #0B0F19;
+  --color-scrolly-gradient-deep: #0B0F19;
+
+  /* ── MOQ table (uses card elevation, not separate bg) ── */
+  --color-table-header-bg: rgba(255, 255, 255, 0.04);
+  --color-table-header-text: #E2E8F0;
+  --color-table-row-hover: rgba(255, 255, 255, 0.03);
+
+  /* ── Process step hover border ── */
+  --color-step-hover-border: rgba(22, 163, 74, 0.35);
+
+  /* ── Shadows ── */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.35), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-glow-green: 0 0 20px rgba(22, 163, 74, 0.2);
+  --shadow-card: 0 8px 32px var(--color-card-shadow);
+  --shadow-card-hover: 0 12px 40px var(--color-card-shadow-hover);
+  --shadow-card-large: 0 16px 48px var(--color-card-shadow-hover);
+
+  color-scheme: dark;
+}
+
+/* ── Smooth theme transition ── */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              fill 0.3s ease,
+              stroke 0.3s ease !important;
+}

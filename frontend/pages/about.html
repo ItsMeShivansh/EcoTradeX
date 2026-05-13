@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Eco TradeX</title>
+  <meta name="description" content="About Eco TradeX — export-grade compostable packaging from India to the world.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css"><link rel="stylesheet" href="../css/reset.css"><link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/layout.css"><link rel="stylesheet" href="../css/components.css"><link rel="stylesheet" href="../css/navigation.css"><link rel="stylesheet" href="../css/footer.css"><link rel="stylesheet" href="../css/hero.css"><link rel="stylesheet" href="../css/sections.css"><link rel="stylesheet" href="../css/whatsapp.css"><link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<div id="shared-navbar"></div>
+<section class="page-hero"><span class="page-hero__label">About Eco TradeX</span><h1 class="page-hero__title">Packaging the Future, Responsibly</h1><p class="page-hero__subtitle">India-based manufacturer and exporter of certified compostable packaging for global B2B markets.</p></section>
+
+<section class="section"><div class="container-narrow">
+  <div class="text-center animate-on-scroll"><span class="section-label">Our Mission</span><h2 class="section-title">Replace Plastic, Not Performance</h2><p class="section-subtitle mx-auto" id="about-mission"></p></div>
+</div></section>
+
+<section class="section section--alt"><div class="container">
+  <div class="text-center" style="margin-bottom:var(--space-12)"><span class="section-label">Why EcoTradex</span><h2 class="section-title">Our Differentiators</h2></div>
+  <div class="grid-3 gap-16" id="about-differentiators"></div>
+</div></section>
+
+<section class="section"><div class="container">
+  <div class="text-center" style="margin-bottom:var(--space-12)"><span class="section-label">Capabilities</span><h2 class="section-title">Export Infrastructure</h2></div>
+  <div class="grid-4 gap-16" id="about-stats"></div>
+</div></section>
+
+<section class="section section--dark"><div class="container-narrow text-center">
+  <h2 class="section-title" style="color:var(--color-dark-section-heading);">Let's Build Something Sustainable</h2>
+  <p style="color:var(--color-slate-400);margin-bottom:var(--space-8);">Whether you're sourcing for a hotel chain, an e-commerce brand, or a retail network — we're ready to ship.</p>
+  <a href="contact.html" class="btn btn-primary btn-lg">Get in Touch</a>
+</div></section>
+
+<div id="shared-footer"></div><div id="shared-whatsapp"></div>
+<script src="../js/main.js"></script><script src="../js/components.js"></script><script src="../js/whatsapp.js"></script><script src="../js/animations.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  await injectSharedComponents('about');
+  const content = await loadSiteContent();
+  if (!content) return;
+
+  document.getElementById('about-mission').textContent = content.company?.mission || '';
+
+  const iconMap = { shield: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>', globe: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>', edit: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>' };
+
+  if (content.aboutDifferentiators) {
+    document.getElementById('about-differentiators').innerHTML = content.aboutDifferentiators.map((d, i) => `
+      <div class="card animate-on-scroll ${i > 0 ? 'delay-'+i : ''}">
+        <div style="width:48px;height:48px;background:var(--color-forest-50);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4);color:var(--color-primary);">${iconMap[d.icon] || iconMap.shield}</div>
+        <h3 class="card-title">${d.title}</h3>
+        <p class="card-text">${d.description}</p>
+      </div>
+    `).join('');
+  }
+
+  if (content.stats) {
+    document.getElementById('about-stats').innerHTML = content.stats.map((s, i) => `
+      <div class="card-flat animate-on-scroll ${i > 0 ? 'delay-'+i : ''}" style="text-align:center;padding:var(--space-6);">
+        <div style="font-size:var(--fs-3xl);font-weight:700;color:var(--color-text-heading);font-family:var(--font-heading);">${s.value}</div>
+        <p style="font-size:var(--fs-sm);color:var(--color-text-secondary);">${s.label}</p>
+      </div>
+    `).join('');
+  }
+  if (typeof initScrollAnimations === 'function') initScrollAnimations();
+});
+</script>
+</body>
+</html>

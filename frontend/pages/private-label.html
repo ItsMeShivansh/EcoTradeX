@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Label Studio — Eco TradeX</title>
+  <meta name="description" content="Upload your logo and preview on compostable packaging. Custom printing for B2B export.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css"><link rel="stylesheet" href="../css/reset.css"><link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/layout.css"><link rel="stylesheet" href="../css/components.css"><link rel="stylesheet" href="../css/navigation.css"><link rel="stylesheet" href="../css/footer.css"><link rel="stylesheet" href="../css/hero.css"><link rel="stylesheet" href="../css/private-label.css"><link rel="stylesheet" href="../css/sections.css"><link rel="stylesheet" href="../css/whatsapp.css"><link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<div id="shared-navbar"></div>
+<section class="page-hero">
+  <span class="page-hero__label">Custom Branding Services</span>
+  <h1 class="page-hero__title">Private Label Studio</h1>
+  <p class="page-hero__subtitle">Upload your logo, preview on our products, and request a custom printing quote.</p>
+</section>
+
+<!-- Print Capabilities -->
+<section class="section"><div class="container">
+  <div class="text-center" style="margin-bottom:var(--space-12)"><span class="section-label">Printing Capabilities</span><h2 class="section-title">Your Brand, Our Products</h2></div>
+  <div class="studio-features" id="pl-features"></div>
+</div></section>
+
+<!-- Customizer -->
+<section class="section section--alt" id="customizer-section"><div class="container">
+  <div class="text-center" style="margin-bottom:var(--space-12)"><span class="section-label">Live Preview</span><h2 class="section-title">Preview Your Logo</h2><p class="section-subtitle mx-auto">Select a product, upload your logo, and drag to position.</p></div>
+  <div class="customizer">
+    <div class="customizer__header"><h3 class="customizer__title">Customization Preview</h3><button class="btn btn-ghost btn-sm" id="customizer-reset">Reset</button></div>
+    <div class="customizer__body">
+      <div class="customizer__sidebar">
+        <div class="form-group"><label class="form-label">Select Product</label><select id="product-select" class="form-select"><option value="bowl">Bagasse Bowl</option><option value="plate">Bagasse Plate</option><option value="bag">Carry Bag</option></select></div>
+        <div class="form-group"><label class="form-label">Upload Logo (PNG/SVG)</label><input type="file" id="logo-upload" class="form-input" accept="image/*" style="padding:0.5rem;"></div>
+        <div class="form-group"><label class="form-label">Logo Size: <span id="scale-value">100</span>%</label><input type="range" id="logo-scale" min="30" max="200" value="100" style="width:100%;"></div>
+        <div class="form-group"><label class="form-label">Print Color Reference</label><input type="color" id="print-color" class="form-input" value="#166534" style="height:44px;padding:4px;"></div>
+        <button class="btn btn-primary w-full" id="customizer-quote"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> Request Quote with Design</button>
+      </div>
+      <div class="customizer__canvas-wrap"><canvas id="customizer-canvas" class="customizer__canvas"></canvas></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- MOQ -->
+<section class="section"><div class="container-narrow">
+  <div class="text-center" style="margin-bottom:var(--space-12)"><span class="section-label">Minimum Order Quantities</span><h2 class="section-title">Custom Printing MOQ</h2></div>
+  <table class="spec-table moq-table" id="moq-table">
+    <thead><tr><th>Product Type</th><th>Print Method</th><th>MOQ</th><th>Lead Time</th></tr></thead>
+    <tbody id="moq-tbody"></tbody>
+  </table>
+</div></section>
+
+<!-- Quote Modal -->
+<div class="modal-backdrop" id="quote-modal-backdrop" onclick="closeModal('quote-modal')"></div>
+<div class="modal" id="quote-modal">
+  <div class="modal__header"><h3 class="modal__title">Custom Printing Quote</h3><button class="modal__close" onclick="closeModal('quote-modal')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
+  <form id="quote-form" class="flex-col gap-4">
+    <div class="form-group"><label class="form-label">Name *</label><input type="text" name="name" class="form-input" required></div>
+    <div class="form-group"><label class="form-label">Company *</label><input type="text" name="company" class="form-input" required></div>
+    <div class="form-group"><label class="form-label">Email *</label><input type="email" name="email" class="form-input" required></div>
+    <div class="form-group"><label class="form-label">Details</label><textarea name="details" class="form-textarea"></textarea></div>
+    <input type="hidden" name="design-snapshot" id="design-snapshot">
+    <button type="submit" class="btn btn-primary w-full">Submit Quote Request</button>
+  </form>
+</div>
+
+<div id="shared-footer"></div>
+<div id="shared-whatsapp"></div>
+<script src="../js/main.js"></script><script src="../js/components.js"></script><script src="../js/customizer.js"></script><script src="../js/whatsapp.js"></script><script src="../js/forms.js"></script><script src="../js/animations.js"></script>
+<script>
+const slider = document.getElementById('logo-scale');
+const val = document.getElementById('scale-value');
+if(slider && val) slider.addEventListener('input', () => val.textContent = slider.value);
+
+document.addEventListener('DOMContentLoaded', async () => {
+  await injectSharedComponents('private-label');
+  const content = await loadSiteContent();
+  if (!content) return;
+
+  // Features
+  const iconMap = { print: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="3" width="12" height="18" rx="1"/><path d="M9 7h6M9 11h6M9 15h4"/></svg>', stamp: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>', palette: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>' };
+  if (content.privateLabelFeatures) {
+    document.getElementById('pl-features').innerHTML = content.privateLabelFeatures.map((f, i) => `
+      <div class="studio-feature animate-on-scroll ${i > 0 ? 'delay-'+i : ''}">
+        <div class="studio-feature__icon">${iconMap[f.icon] || iconMap.print}</div>
+        <h3 class="studio-feature__title">${f.title}</h3>
+        <p class="studio-feature__text">${f.description}</p>
+      </div>
+    `).join('');
+  }
+
+  // MOQ
+  if (content.moqTable) {
+    document.getElementById('moq-tbody').innerHTML = content.moqTable.map(r => `<tr><td>${r.product}</td><td>${r.method}</td><td>${r.moq}</td><td>${r.leadTime}</td></tr>`).join('');
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compostable Tableware — Eco TradeX</title>
+  <meta name="description" content="Export-grade compostable plates, bowls, clamshells, and cutlery with full specs and export data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css"><link rel="stylesheet" href="../css/reset.css"><link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/layout.css"><link rel="stylesheet" href="../css/components.css"><link rel="stylesheet" href="../css/navigation.css"><link rel="stylesheet" href="../css/footer.css"><link rel="stylesheet" href="../css/hero.css"><link rel="stylesheet" href="../css/products.css"><link rel="stylesheet" href="../css/sections.css"><link rel="stylesheet" href="../css/whatsapp.css"><link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<div id="shared-navbar"></div>
+
+<section class="page-hero">
+  <span class="page-hero__label">Product Catalog</span>
+  <h1 class="page-hero__title">Compostable Tableware</h1>
+  <p class="page-hero__subtitle">Bagasse plates, bowls, clamshells, and CPLA cutlery — with full technical specifications and export data.</p>
+</section>
+
+<section class="section"><div class="container">
+  <div class="products-filter">
+    <button class="filter-btn is-active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="Plates">Plates</button>
+    <button class="filter-btn" data-filter="Bowls">Bowls</button>
+    <button class="filter-btn" data-filter="Clamshells">Clamshells</button>
+    <button class="filter-btn" data-filter="Cutlery">Cutlery</button>
+  </div>
+  <div class="grid-3" id="tableware-grid"></div>
+</div></section>
+
+<section class="section section--alt"><div class="container-narrow text-center">
+  <h2 class="section-title">Need Custom Branding?</h2>
+  <p class="section-subtitle mx-auto" style="margin-bottom:var(--space-8)">Visit our Private Label Studio to preview your logo on any product.</p>
+  <a href="private-label.html" class="btn btn-primary btn-lg">Open Private Label Studio</a>
+</div></section>
+
+<div id="shared-footer"></div>
+<div id="shared-whatsapp"></div>
+
+<script src="../js/main.js"></script><script src="../js/components.js"></script><script src="../js/products.js"></script><script src="../js/whatsapp.js"></script><script src="../js/animations.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  await injectSharedComponents('products');
+  renderProductGrid('tableware-grid', 'tableware');
+  initProductFilters('tableware-grid', 'tableware');
+});
+</script>
+</body>
+</html>

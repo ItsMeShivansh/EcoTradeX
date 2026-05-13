@@ -1,0 +1,182 @@
+/* ============================================
+   Scrollytelling — Decomposition Animation
+   ============================================ */
+
+.scrollytelling {
+  position: relative;
+  background: linear-gradient(to bottom, var(--color-bg-primary), var(--color-scrolly-gradient-mid), var(--color-scrolly-gradient-deep), var(--color-bg-primary));
+  overflow: hidden;
+}
+
+.scrollytelling__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.scrollytelling__visual {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollytelling__plate {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #E8DDD0, #D4C5B0, #BFB09A);
+  box-shadow: var(--shadow-xl);
+  transition: all 0.5s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollytelling__plate-inner {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+/* Decomposition stages — these are intentionally artistic/literal colors for the plate decomposition */
+.scrollytelling__plate[data-stage="0"] {
+  filter: none;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scrollytelling__plate[data-stage="1"] {
+  filter: saturate(0.8);
+  background: radial-gradient(circle, #D4C5B0, #C5B69E, #B0A08A);
+  box-shadow: var(--shadow-lg);
+}
+
+.scrollytelling__plate[data-stage="2"] {
+  filter: saturate(0.6) brightness(0.95);
+  background: radial-gradient(circle, #C0B098, #A89878, #907850);
+  border-radius: 48% 52% 50% 50% / 52% 48% 50% 50%;
+  box-shadow: var(--shadow-md);
+}
+
+.scrollytelling__plate[data-stage="3"] {
+  filter: saturate(0.4) brightness(0.9);
+  background: radial-gradient(circle, #907850, #7A6840, #6A5830);
+  border-radius: 45% 55% 48% 52% / 55% 45% 52% 48%;
+  transform: scale(0.85);
+  box-shadow: var(--shadow-sm);
+}
+
+.scrollytelling__plate[data-stage="4"] {
+  filter: saturate(0.2) brightness(0.85);
+  background: radial-gradient(circle, #6A5830, #5A4820, #4A3810);
+  border-radius: 40% 60% 45% 55% / 58% 42% 55% 45%;
+  transform: scale(0.65);
+  opacity: 0.7;
+  box-shadow: none;
+}
+
+/* ── Timeline ── */
+.scrollytelling__timeline {
+  position: absolute;
+  right: -120px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.scrollytelling__marker {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  opacity: 0.3;
+  transition: opacity var(--transition-base);
+}
+
+.scrollytelling__marker.is-active {
+  opacity: 1;
+}
+
+.scrollytelling__marker-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-slate-300);
+  border: 2px solid var(--color-slate-400);
+  transition: all var(--transition-base);
+}
+
+.scrollytelling__marker.is-active .scrollytelling__marker-dot {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-glow-green);
+}
+
+.scrollytelling__marker-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.scrollytelling__marker.is-active .scrollytelling__marker-label {
+  color: var(--color-text-heading);
+  font-weight: var(--fw-semibold);
+}
+
+/* ── Text Steps ── */
+.scrollytelling__steps {
+  position: relative;
+  z-index: 2;
+}
+
+.scrollytelling__step {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 var(--container-padding);
+}
+
+.scrollytelling__step-content {
+  max-width: 360px;
+  background: var(--color-glass-bg-step);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+}
+
+.scrollytelling__step-day {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-primary);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.scrollytelling__step-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-3);
+}
+
+.scrollytelling__step-text {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+}
