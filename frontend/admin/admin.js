@@ -1,6 +1,9 @@
 /**
  * EcoTradex Admin Dashboard
  */
+const API_BASE_URL = window.API_BASE_URL || 'https://ecotradex-qeqc.onrender.com';
+const apiUrl = (path) => new URL(path, API_BASE_URL).toString();
+
 let TOKEN = '';
 let siteContent = {};
 let productsData = {};
@@ -51,7 +54,7 @@ function logout() {
 async function api(method, url, body) {
   const opts = { method, headers: { 'x-admin-token': TOKEN, 'Content-Type': 'application/json' } };
   if (body) opts.body = JSON.stringify(body);
-  const res = await fetch(url, opts);
+  const res = await fetch(apiUrl(url), opts);
   if (!res.ok) throw new Error(await res.text());
   return res.json();
 }
@@ -378,7 +381,7 @@ async function uploadImage() {
   const formData = new FormData();
   formData.append('image', input.files[0]);
   try {
-    const res = await fetch('/api/admin/upload', { method:'POST', headers:{'x-admin-token':TOKEN}, body:formData });
+    const res = await fetch(apiUrl('/api/admin/upload'), { method:'POST', headers:{'x-admin-token':TOKEN}, body:formData });
     const data = await res.json();
     if (data.success) { toast('Image uploaded!'); input.value=''; renderImages(); }
   } catch(e) { toast('Upload failed',true); }

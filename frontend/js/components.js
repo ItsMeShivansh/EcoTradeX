@@ -259,11 +259,14 @@ function buildWhatsAppFloat() {
  * Initialize shared components on page load
  * Usage: call injectSharedComponents('pageName') in each page
  */
+const API_BASE_URL = window.API_BASE_URL || 'https://ecotradex-qeqc.onrender.com';
+const apiUrl = (path) => new URL(path, API_BASE_URL).toString();
+
 async function injectSharedComponents(activePage) {
   // Fetch full content
   let content = {};
   try {
-    const res = await fetch('/api/content');
+    const res = await fetch(apiUrl('/api/content'));
     if (res.ok) content = await res.json();
   } catch(e) {}
 
@@ -301,7 +304,7 @@ async function injectSharedComponents(activePage) {
  */
 async function loadSiteContent() {
   try {
-    const res = await fetch('/api/content');
+    const res = await fetch(apiUrl('/api/content'));
     if (res.ok) return await res.json();
   } catch(e) {}
   return null;

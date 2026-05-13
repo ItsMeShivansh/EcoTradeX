@@ -2,6 +2,9 @@
  * EcoTradex — Form Validation & Submission
  */
 
+const API_BASE_URL = window.API_BASE_URL || 'https://ecotradex-qeqc.onrender.com';
+const apiUrl = (path) => new URL(path, API_BASE_URL).toString();
+
 document.addEventListener('DOMContentLoaded', () => {
   initForms();
 });
@@ -46,7 +49,7 @@ async function handleFormSubmit(e, endpoint, successMessage) {
   const data = Object.fromEntries(formData.entries());
 
   try {
-    const res = await fetch(endpoint, {
+    const res = await fetch(apiUrl(endpoint), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)

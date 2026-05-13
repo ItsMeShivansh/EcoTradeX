@@ -4,6 +4,9 @@
  * Phone number loaded dynamically from site content API
  */
 
+const API_BASE_URL = window.API_BASE_URL || 'https://ecotradex-qeqc.onrender.com';
+const apiUrl = (path) => new URL(path, API_BASE_URL).toString();
+
 document.addEventListener('DOMContentLoaded', () => {
   // Delay init slightly to allow shared components to inject
   setTimeout(initWhatsApp, 500);
@@ -16,7 +19,7 @@ async function initWhatsApp() {
   // Load phone number from API
   let WHATSAPP_NUMBER = '918799608288';
   try {
-    const res = await fetch('/api/content/company');
+    const res = await fetch(apiUrl('/api/content/company'));
     if (res.ok) {
       const data = await res.json();
       if (data.whatsappNumber) WHATSAPP_NUMBER = data.whatsappNumber;
