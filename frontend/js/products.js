@@ -1,19 +1,21 @@
 /**
  * EcoTradex — Product Catalog Rendering
- * Loads products.json and renders product cards/details
+ * Loads products from API (Firestore) and renders product cards/details
  */
+
+const API_BASE_URL = 'https://ecotradex-qeqc.onrender.com';
+const apiUrl = (path) => new URL(path, API_BASE_URL).toString();
 
 let productsData = null;
 
 async function loadProducts() {
   if (productsData) return productsData;
   try {
-    const basePath = getBasePath();
-    const res = await fetch(basePath + 'data/products.json');
+    const res = await fetch(apiUrl('/api/products'));
     productsData = await res.json();
     return productsData;
   } catch (err) {
-    console.error('Failed to load products:', err);
+    console.error('Failed to load products from API:', err);
     return null;
   }
 }
